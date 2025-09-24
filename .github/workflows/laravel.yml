@@ -21,7 +21,7 @@ jobs:
       run: composer install --optimize-autoloader --no-dev --no-progress --no-interaction --prefer-dist
       
     - name: Test
-      run: run: vendor/bin/phpunit || true
+      run: vendor/bin/phpunit || true
       
   deploy:
     runs-on: ubuntu-latest
