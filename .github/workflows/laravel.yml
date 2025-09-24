@@ -16,6 +16,9 @@ jobs:
       with:
         php-version: '7.4'
         extensions: mbstring, xml, bcmatch, curl, mysql
+
+    - name: Allow Composer plugins
+      run: composer config --no-plugins allow-plugins.kylekatarnls/update-helper true
         
     - name: Install Dependencies
       run: composer install --optimize-autoloader --no-dev --no-progress --no-interaction --prefer-dist
